@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #0f0f0f;
+    color: #ddd;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #000;
+    border-bottom: 3px solid #e60012;
+    padding: 15px 0;
+    z-index: 100;
+}
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img {
+    height: 80px;
+}
+nav ul {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+nav a {
+    color: #ccc;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #e60012;
+}
+#inicio {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+                url("https://images.unsplash.com/photo-1542751371-adc38448a05e") center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 100px;
+}
+#inicio h1 {
+    font-size: 60px;
+    color: #e60012;
+    margin-bottom: 20px;
+}
+#inicio p {
+    font-size: 20px;
+    max-width: 700px;
+    margin-bottom: 30px;
+}
+.btn {
+    background: #e60012;
+    color: white;
+    padding: 14px 40px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: #c70010;
+}
+.container {
+    max-width: 1200px;
+    margin: 100px auto 50px;
+    padding: 0 20px;
+}
+h2 {
+    text-align: center;
+    font-size: 38px;
+    color: #e60012;
+    margin-bottom: 50px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+.card {
+    background: #111;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #333;
+    transition: all 0.3s;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(230, 0, 18, 0.2);
+}
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+.card h3 {
+    padding: 15px 15px 5px;
+    font-size: 20px;
+}
+.card p {
+    padding: 0 15px;
+    color: #aaa;
+    font-size: 14px;
+}
+.precio {
+    color: #e60012;
+    font-weight: bold;
+    font-size: 22px;
+    padding: 10px 15px 20px;
+}
+.detalle {
+    max-width: 1200px;
+    margin: 120px auto 80px;
+    padding: 0 20px;
+}
+.volver {
+    color: #aaa;
+    font-size: 16px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.volver:hover {
+    color: #e60012;
+}
+.producto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+.producto img {
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(230, 0, 18, 0.25);
+}
+.info h1 {
+    font-size: 46px;
+    color: #e60012;
+    margin-bottom: 15px;
+}
+.info > p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+.precio.grande {
+    font-size: 48px;
+    margin: 30px 0;
+}
+.comprar {
+    font-size: 20px;
+    padding: 16px 50px;
+    margin: 20px 0;
+}
+.caracteristicas h3 {
+    margin: 40px 0 15px;
+    color: #e60012;
+}
+
+.caracteristicas ul {
+    padding-left: 25px;
+    color: #bbb;
+}
+.formulario-contacto {
+    max-width: 700px;
+    margin: 120px auto 100px;
+    padding: 40px;
+    text-align: center;
+}
+.formulario-contacto h1 {
+    font-size: 46px;
+    color: #e60012;
+    margin-bottom: 15px;
+}
+.formulario-contacto p {
+    font-size: 18px;
+    color: #aaa;
+    margin-bottom: 40px;
+}
+.formulario-contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.formulario-contacto input, .formulario-contacto textarea {
+    padding: 16px;
+    background: #111;
+    border: 2px solid #333;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+}
+.formulario-contacto textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+.formulario-contacto .btn {
+    align-self: center;
+    padding: 16px 50px;
+    font-size: 18px;
+}
+footer {
+    background: #000;
+    padding: 70px 20px 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+footer h3, footer h4 {
+    color: #e60012;
+    margin-bottom: 15px;
+}
+footer a {
+    color: #aaa;
+    display: block;
+    margin: 8px 0;
+    transition: color 0.3s;
+}
+footer a:hover {
+    color: #e60012;
+}
+footer p:last-child {
+    grid-column: 1 / -1;
+    margin-top: 30px;
+    color: #666;
+    font-size: 14px;
+}
+/* =============== RESPONSIVE =============== */
+@media (max-width: 900px) {
+    .producto {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .producto img {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    #inicio h1 { font-size: 48px; }
+}
+@media (max-width: 680px) {
+    nav ul { display: none; } /* Puedes añadir menú hamburguesa después */
+    #inicio h1 { font-size: 40px; }
+    .formulario-contacto { padding: 20px; }
+}
