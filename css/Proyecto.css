@@ -150,6 +150,7 @@ h2 {
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: start;
+    margin-bottom: 60px;
 }
 .producto img {
     border-radius: 16px;
@@ -178,10 +179,52 @@ h2 {
     margin: 40px 0 15px;
     color: #e60012;
 }
-
 .caracteristicas ul {
     padding-left: 25px;
     color: #bbb;
+}
+.pros-cons {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+.ventajas h3, .desventajas h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.ventajas h3 {
+    color: #00ff9d;
+}
+.desventajas h3 {
+    color: #ff4444;
+}
+.ventajas ul, .desventajas ul {
+    list-style: none;
+    padding-left: 5px;
+}
+.ventajas li, .desventajas li {
+    padding: 12px 0 12px 35px;
+    font-size: 17px;
+    position: relative;
+}
+.ventajas li::before {
+    content: "✓";
+    color: #00ff9d;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 22px;
+}
+.desventajas li::before {
+    content: "✗";
+    color: #ff4444;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 24px;
 }
 .formulario-contacto {
     max-width: 700px;
@@ -249,9 +292,8 @@ footer p:last-child {
     color: #666;
     font-size: 14px;
 }
-/* =============== RESPONSIVE =============== */
 @media (max-width: 900px) {
-    .producto {
+    .producto, .pros-cons {
         grid-template-columns: 1fr;
         text-align: center;
     }
@@ -259,10 +301,18 @@ footer p:last-child {
         max-width: 500px;
         margin: 0 auto;
     }
-    #inicio h1 { font-size: 48px; }
+    #inicio h1 {
+        font-size: 48px;
+    }
 }
 @media (max-width: 680px) {
-    nav ul { display: none; } /* Puedes añadir menú hamburguesa después */
-    #inicio h1 { font-size: 40px; }
-    .formulario-contacto { padding: 20px; }
+    nav ul {
+        display: none;
+    }
+    #inicio h1 {
+        font-size: 40px;
+    }
+    .formulario-contacto {
+        padding: 20px;
+    }
 }
