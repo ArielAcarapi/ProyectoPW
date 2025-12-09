@@ -60,7 +60,7 @@ nav a:hover { color: #e60012; }
     padding: 8px;
 }
 #inicio {
-    height: 90vh;
+    height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
                 url("https://images.unsplash.com/photo-1542751371-adc38448a05e") center/cover;
     display: flex;
