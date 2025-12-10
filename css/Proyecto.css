@@ -267,6 +267,31 @@ h2 {
     color: #aaa; 
     margin-bottom: 40px; 
 }
+.formulario-contacto input,
+.formulario-contacto textarea {
+    width: 100%;
+    max-width: 600px;
+    margin: 12px auto;
+    padding: 16px;
+    background: #111;
+    border: 2px solid #333;
+    border-radius: 12px;
+    color: white;
+    font-size: 16px;
+    display: block;
+    box-sizing: border-box;
+}
+
+.formulario-contacto textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+
+.formulario-contacto .btn {
+    align-self: center;
+    margin-top: 25px;
+    padding: 16px 50px;
+}
 #msg {
     display: none;
     color: #00ff9d;
