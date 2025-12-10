@@ -25,7 +25,7 @@ header {
     background: #000;
     border-bottom: 3px solid #e60012;
     padding: 15px 0;
-    z-index: 100;
+    z-index: 1000;
 }
 nav {
     max-width: 1200px;
@@ -49,7 +49,9 @@ nav a {
     font-size: 16px;
     transition: color 0.3s;
 }
-nav a:hover { color: #e60012; }
+nav a:hover { 
+    color: #e60012; 
+}
 .btn-menu {
     display: none;
     background: none;
@@ -89,7 +91,9 @@ nav a:hover { color: #e60012; }
     display: inline-block;
     transition: 0.3s;
 }
-.btn:hover { background: #c70010; }
+.btn:hover { 
+    background: #c70010; 
+}
 .container { 
     max-width: 1200px; 
     margin: 100px auto 50px; 
@@ -130,12 +134,11 @@ h2 {
     padding: 15px 15px 5px; 
     font-size: 20px; 
 }
-.card p { 
+.card p   { 
     padding: 0 15px; 
     color: #aaa; 
-    font-size: 14px; 
-}
-.precio { 
+    font-size: 14px; }
+.precio   { 
     color: #e60012; 
     font-weight: bold; 
     font-size: 22px; 
@@ -144,7 +147,7 @@ h2 {
 .detalle { 
     max-width: 1200px; 
     margin: 140px auto 80px; 
-    padding: 60px 20px 20px;   /* espacio arriba para el botón */
+    padding: 80px 20px 20px; 
     position: relative;
 }
 .volver {
@@ -155,7 +158,7 @@ h2 {
     padding: 12px 24px;
     border-radius: 30px;
     position: absolute;
-    top: 15px;                 /* dentro del detalle, no fuera del header */
+    top: 20px;
     left: 20px;
     z-index: 999;
     box-shadow: 0 6px 20px rgba(0,0,0,0.7);
@@ -178,6 +181,10 @@ h2 {
     box-shadow: 0 15px 40px rgba(230,0,18,0.25);
     max-width: 100%;
     height: auto;
+    transition: transform 0.4s ease;
+}
+.producto img:hover { 
+    transform: scale(1.05); 
 }
 .info h1 { 
     font-size: 46px; 
@@ -216,34 +223,33 @@ h2 {
 .desventajas h3 { 
     color: #ff4444; 
 }
-.ventajas h3, .desventajas h3 {
-    font-size: 32px;
-    margin-bottom: 20px;
+.ventajas h3, .desventajas h3 { 
+    font-size: 32px; 
+    margin-bottom: 20px; 
 }
-.ventajas ul, .desventajas ul {
-    list-style: none;
-    padding-left: 5px;
+.ventajas ul, .desventajas ul { 
+    list-style: none; 
+    padding-left: 5px; }
+.ventajas li, .desventajas li { 
+    padding: 12px 0 12px 35px; 
+    font-size: 17px; 
+    position: relative; 
 }
-.ventajas li, .desventajas li {
-    padding: 12px 0 12px 35px;
-    font-size: 17px;
-    position: relative;
+.ventajas li::before  { 
+    content: "✔️"; 
+    color: #00ff9d; 
+    font-weight: bold; 
+    position: absolute; 
+    left: 0; 
+    font-size: 22px; 
 }
-.ventajas li::before {
-    content: "✔️";
-    color: #00ff9d;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-    font-size: 22px;
-}
-.desventajas li::before {
-    content: "❌";
-    color: #ff4444;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-    font-size: 24px;
+.desventajas li::before { 
+    content: "❌"; 
+    color: #ff4444; 
+    font-weight: bold; 
+    position: absolute; 
+    left: 0; 
+    font-size: 24px; 
 }
 .formulario-contacto {
     max-width: 700px;
@@ -261,36 +267,34 @@ h2 {
     color: #aaa; 
     margin-bottom: 40px; 
 }
-.formulario-contacto form { 
-    display: flex; 
-    flex-direction: column; 
-    gap: 20px; 
+#msg {
+    display: none;
+    color: #00ff9d;
+    font-size: 20px;
+    margin-bottom: 20px;
+    animation: fadeIn 0.8s ease forwards;
 }
-.formulario-contacto input, .formulario-contacto textarea {
-    padding: 16px;
-    background: #111;
-    border: 2px solid #333;
-    border-radius: 10px;
-    color: white;
-    font-size: 16px;
-}
-.formulario-contacto textarea { 
-    min-height: 180px; 
-    resize: vertical; 
-}
-.formulario-contacto .btn { 
-    align-self: center; 
-    padding: 16px 50px; 
-    font-size: 18px; 
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(-10px); 
+    }
+    to   { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
 }
 footer {
     background: #000;
     padding: 70px 20px 30px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
     gap: 40px;
     text-align: center;
     border-top: 1px solid #333;
+}
+footer ul { 
+    list-style: none; 
 }
 footer h3, footer h4 { 
     color: #e60012; 
@@ -320,10 +324,14 @@ footer p:last-child {
         max-width: 500px; 
         margin: 0 auto; 
     }
-    #inicio h1 { font-size: 48px; }
+    #inicio h1 { 
+        font-size: 48px; 
+    }
 }
 @media (max-width: 680px) {
-    .btn-menu { display: block; }
+    .btn-menu { 
+        display: block; 
+    }
     nav ul {
         position: fixed;
         top: 90px;
@@ -340,16 +348,26 @@ footer p:last-child {
         transition: transform 0.4s ease;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
+        z-index: 900;
     }
-    nav ul.activo {
-        transform: translateX(0);
+    nav ul.activo { 
+        transform: translateX(0); 
     }
-    nav li { margin: 20px 0; }
+    nav li { 
+        margin: 20px 0; 
+    }
     nav a { 
         font-size: 22px; 
         padding: 15px; 
         display: block; 
     }
-    #inicio h1 { font-size: 40px; }
-    .formulario-contacto { padding: 20px; }
+    #inicio h1 { 
+        font-size: 40px; 
+    }
+    .formulario-contacto { 
+        padding: 20px; 
+    }
+}
+#teclados, #ratones, #audifonos, #monitores {
+    scroll-margin-top: 120px;
 }
